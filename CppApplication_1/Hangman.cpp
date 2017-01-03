@@ -13,12 +13,20 @@
 
 #include <cstdlib>
 #include <stdio.h>
-
+#include "Hangman.h"
 using namespace std;
 
 /*
  * 
  */
+struct Letter
+{
+    BYTE Uppercase;
+    BYTE Lowercase;
+    struct Letter *PreviousLetter;
+    struct Letter *NextLetter; 
+};
+
 int main(int argc, char** argv) 
 {
     printf("Niki");
